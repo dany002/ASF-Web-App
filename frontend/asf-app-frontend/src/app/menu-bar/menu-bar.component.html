@@ -1,0 +1,39 @@
+<mat-toolbar color="primary" class="menu-bar">
+  <div class="flex-container">
+    <!-- Image -->
+    <img src="../../assets/logo-asf.webp" alt="ASF Logo" class="logo" (click)="navigateTo('/home')">
+
+    <!-- Spacer to push menu items to the right -->
+    <div class="flex-spacer"></div>
+
+    <!-- Menu items -->
+    <div class="menu-items">
+      <span class="menu-item" (click)="navigateTo('/home')">Acasa</span>
+
+      <app-auto-open-menu>
+        <div trigger>Despre</div>
+        <div content>
+          <span mat-menu-item (click)="navigateTo('/history')">Istoric</span>
+          <span mat-menu-item (click)="navigateTo('/departments')">Departamente</span>
+          <span mat-menu-item (click)="navigateTo('/executiveTeam')">Birou de Conducere</span>
+        </div>
+      </app-auto-open-menu>
+      <span class="menu-item" (click)="navigateTo('/projects')">Proiecte</span>
+      <app-auto-open-menu>
+        <div trigger>Studenți</div>
+        <div content>
+          <span mat-menu-item (click)="navigateTo('/freshmanGuide')">Ghidul Bobocului</span>
+          <span mat-menu-item (click)="navigateTo('/timetable')">Orar</span>
+          <span mat-menu-item (click)="navigateTo('/rooms')">Săli</span>
+          <span mat-menu-item (click)="navigateTo('/scholarships')">Burse</span>
+          <span mat-menu-item (click)="navigateTo('/subjectSheets')">Fișe Discipline</span>
+          <span mat-menu-item (click)="navigateTo('/admissions')">Admitere</span>
+          <span mat-menu-item (click)="navigateTo('/accommodation')">Cazări</span>
+        </div>
+      </app-auto-open-menu>
+      <span class="menu-item" (click)="navigateTo('/contact')">Contact</span>
+    </div>
+    <button mat-flat-button color="primary" class="login-btn" (click)="navigateTo('/login')">Log In Admin</button>
+  </div>
+</mat-toolbar>
+

@@ -1,0 +1,123 @@
+/* Container styles */
+.container {
+  max-width: 1600px; /* Increased width */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Title styles */
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Logo styles */
+.logo {
+  display: block;
+  margin: 0 auto;
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+/* Landscape photo styles */
+.landscape {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 30px; /* Larger margin for the first picture */
+}
+
+/* Section styles */
+.section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px; /* Larger margin */
+  background-color: black; /* Set the background color to black */
+  color: white; /* Set the text color to white */
+}
+
+/* Text styles */
+.text {
+  flex: 1;
+  padding-right: 20px;
+  padding: 20px; /* Adding padding for a better layout */
+  text-align: center; /* Center-align text */
+}
+
+/* Picture styles */
+.picture {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Split-picture styles */
+.split-picture {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Split-picture text styles */
+.split-picture-text {
+  flex: 1;
+  padding-right: 20px;
+}
+
+/* Split-picture image styles */
+.split-picture-image {
+  flex: 1;
+}
+
+/* Departments styles */
+.departments {
+  text-align: center;
+  margin-bottom: 30px; /* Larger margin */
+}
+
+/* Leadership styles */
+.leadership {
+  text-align: center;
+  margin-bottom: 30px; /* Larger margin */
+}
+
+/* News styles */
+.news {
+  margin-bottom: 30px; /* Larger margin */
+}
+
+/* News item styles */
+.news-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* Larger margin */
+}
+
+/* News image styles */
+.news-image {
+  width: 150px;
+  height: 100px;
+  margin-right: 10px;
+}
+
+/* News text styles */
+.news-text {
+  flex: 1;
+}
+
+.picture .image {
+  max-width: 100%; /* Ensure the image doesn't exceed its container */
+}
+
+.title h1 {
+  font-size: 4rem; /* Change the font size to your desired value */
+  line-height: 1.2;
+  font-family: Roboto, sans-serif;
+}
+
+.departments h1 {
+  font-size: 2.5rem;
+  line-height: 1.5;
+  font-family: Roboto, sans-serif;
+}

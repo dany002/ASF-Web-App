@@ -1,0 +1,53 @@
+/* menu-bar.component.css */
+
+.menu-bar {
+  display: flex;
+  justify-content: center; /* Center items along the main axis */
+  align-items: center; /* Align items along the cross axis */
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  width: 100%; /* Ensure full width within the toolbar */
+}
+
+.logo {
+  width: 130px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 20px; /* Adjust spacing between the logo and menu items */
+}
+
+.menu-items {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center menu items */
+  flex: 1; /* Allow menu items to take available space */
+  margin-left: -200px; /* Adjust negative margin for fine-tuning */
+}
+
+@media (max-width: 600px) {
+  .menu-items {
+    margin-left: 0; /* Reset the margin for smaller screens */
+    justify-content: flex-end; /* Align menu items to the right on mobile */
+  }
+}
+
+
+
+.menu-item {
+  padding: 0 15px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+}
+
+.login-btn {
+  margin-right: 20px; /* Adjust the margin to separate from menu items */
+  font-weight: bold;
+  text-transform: uppercase; /* Transform text to uppercase */
+  border-radius: 0; /* Adjust border radius */
+}
+
