@@ -19,9 +19,38 @@ public class Department {
     @Column(name = "description")
     private String description;
 
-    @Column(name = "teamLeader")
-    @OneToOne(mappedBy = "department", cascade = CascadeType.ALL)
-    private TeamLeader teamLeader;
+    @OneToOne
+    @JoinColumn(name = "team_leader_id")
+    private TeamLeader team_leader;
+
+    public Department(Long id, String name, String picture, String description, TeamLeader team_leader) {
+        this.id = id;
+        this.name = name;
+        this.picture = picture;
+        this.description = description;
+        this.team_leader = team_leader;
+    }
+
+    public Department(String name, String picture, String description, TeamLeader team_leader) {
+        this.name = name;
+        this.picture = picture;
+        this.description = description;
+        this.team_leader = team_leader;
+    }
+
+    public Department(String name, String description, TeamLeader team_leader) {
+        this.name = name;
+        this.description = description;
+        this.team_leader = team_leader;
+    }
+
+    public Department(String name, String description) {
+        this.name = name;
+        this.description = description;
+    }
+
+    public Department() {
+    }
 
     public Long getId() {
         return id;
@@ -55,11 +84,11 @@ public class Department {
         this.description = description;
     }
 
-    public TeamLeader getTeamLeader() {
-        return teamLeader;
+    public TeamLeader getTeam_leader() {
+        return team_leader;
     }
 
-    public void setTeamLeader(TeamLeader teamLeader) {
-        this.teamLeader = teamLeader;
+    public void setTeam_leader(TeamLeader team_leader) {
+        this.team_leader = team_leader;
     }
 }

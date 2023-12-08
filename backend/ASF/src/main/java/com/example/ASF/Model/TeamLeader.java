@@ -15,9 +15,40 @@ public class TeamLeader {
     @Column(name = "picture")
     private String picture;
 
-    @OneToOne
-    @JoinColumn(name = "department_id")
-    private Department department;
+    @Column(name = "description")
+    private String description;
+
+
+
+    public TeamLeader(Long id, String name, String picture, String description) {
+        this.id = id;
+        this.name = name;
+        this.picture = picture;
+        this.description = description;
+    }
+
+    public TeamLeader(String name, String picture, String description) {
+        this.name = name;
+        this.picture = picture;
+        this.description = description;
+    }
+
+
+    public TeamLeader(String name, String description) {
+        this.name = name;
+        this.description = description;
+    }
+
+    public TeamLeader() {
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
     public Long getId() {
         return id;
@@ -43,11 +74,4 @@ public class TeamLeader {
         this.picture = picture;
     }
 
-    public Department getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(Department department) {
-        this.department = department;
-    }
 }

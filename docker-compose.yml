@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  postgres-db:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: "ASF"
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - my-network
+
+  nginx-server:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - /home/senzationall/Desktop/ASF-Web-App/resources/test:/usr/share/nginx/html/images
+    networks:
+      - my-network
+
+networks:
+  my-network:
+
+volumes:
+  postgres-data:
+    driver: local
+

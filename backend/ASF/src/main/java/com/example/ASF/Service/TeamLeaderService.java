@@ -36,7 +36,7 @@ public class TeamLeaderService {
         if (teamLeaderFromRepo.isPresent()){
             teamLeaderFromRepo.get().setName(teamLeader.getName());
             teamLeaderFromRepo.get().setPicture(teamLeader.getPicture());
-            teamLeaderFromRepo.get().setDepartment(teamLeader.getDepartment());
+            teamLeaderFromRepo.get().setDescription(teamLeader.getDescription());
             return this.teamLeaderRepository.save(teamLeaderFromRepo.get());
         }
         return null;

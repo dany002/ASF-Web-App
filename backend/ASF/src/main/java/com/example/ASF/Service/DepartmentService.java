@@ -37,7 +37,7 @@ public class DepartmentService {
             departmentFromRepo.get().setDescription(department.getDescription());
             departmentFromRepo.get().setName(department.getName());
             departmentFromRepo.get().setPicture(department.getPicture());
-            departmentFromRepo.get().setTeamLeader(department.getTeamLeader());
+            departmentFromRepo.get().setTeam_leader(department.getTeam_leader());
             return this.departmentRepository.save(departmentFromRepo.get());
         }
         else

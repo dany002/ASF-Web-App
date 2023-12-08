@@ -1,0 +1,46 @@
+<h2>Edit Department</h2>
+
+<form [formGroup]="departmentForm" (ngSubmit)="onFormSubmit($event)">
+  <mat-form-field appearance="fill">
+    <mat-label>Department Name</mat-label>
+    <input matInput type="text" placeholder="Department Name" formControlName="name">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Team Leader</mat-label>
+    <mat-select formControlName="team_leader">
+      <mat-option *ngFor="let leader of teamLeaders" [value]="leader.id">
+        {{ leader.name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Description</mat-label>
+    <textarea matInput placeholder="Description" formControlName="description"></textarea>
+  </mat-form-field>
+
+  <div>
+    <button mat-raised-button color="primary" type="button" (click)="openFileInput()">
+      <mat-icon>cloud_upload</mat-icon> Upload Image
+    </button>
+    <input type="file" accept="image/*" id="fileInput" style="display: none;" (change)="onFileSelected($event)">
+    <div *ngIf="selectedFileName">
+      {{ selectedFileName }}
+      <button mat-icon-button color="warn" (click)="cancelFileSelection()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+  </div>
+  <div *ngIf="data.picture && !selectedFileName">
+    {{ data.picture }}
+    <button mat-icon-button color="warn" (click)="removeExistingImage()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+
+  <button mat-button (click)="onCancelClick($event)">Cancel</button>
+  <button mat-raised-button color="primary" (click)="onFormSubmit($event)">
+    {{ data ? 'Update' : 'Save' }}
+  </button>
+</form>
