@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="title">
+    <h1>Departments</h1>
+  </div>
+  <!-- Section with text and picture -->
+  <div class="departments">
+    <button *ngIf="isLoggedIn" mat-icon-button matTooltip="Add a department" aria-label="Add" (click)="openAddDepartmentDialog()">
+      <mat-icon aria-label="Add">add</mat-icon>
+    </button>
+    <div class="department-images">
+      <div class="department" *ngFor="let department of departments; let i = index;" [ngClass]="{'centered-department': i === departments.length - 1 && departments.length % 2 !== 0}">
+        <div class="department-wrapper">
+          <div class="department-image" [ngStyle]="{ 'background-image': 'url(' + constructImageUrl(department.picture) + ')' }"></div>
+          <div class="department-description">
+            <p>{{ department.description }}</p>
+            <div class="department-buttons">
+              <button *ngIf="isLoggedIn" mat-icon-button matTooltip="Edit" aria-label="Edit" (click)="editDepartment(department)">
+                <mat-icon aria-label="Edit">edit</mat-icon>
+              </button>
+              <button *ngIf="isLoggedIn" mat-icon-button matTooltip="Delete" aria-label="Delete" (click)="deleteDepartment(department)">
+                <mat-icon aria-label="Delete">delete</mat-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

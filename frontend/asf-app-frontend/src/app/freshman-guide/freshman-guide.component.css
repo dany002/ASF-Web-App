@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content horizontally */
+}
+
+.title {
+  margin-bottom: 50px; /* Add some spacing between the title and the section */
+  margin-top: 50px; /* Add margin to the top of the title */
+}
+
+.title h1 {
+  font-size: 40px; /* Increase title size */
+}
+
+.section {
+  display: flex;
+  align-items: center; /* Align items vertically */
+}

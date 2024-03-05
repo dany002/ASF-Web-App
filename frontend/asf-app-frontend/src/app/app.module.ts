@@ -24,6 +24,12 @@ import { AddTeamLeaderDialogComponent } from './add-team-leader-dialog/add-team-
 import { EditTeamLeaderDialogComponent } from './edit-team-leader-dialog/edit-team-leader-dialog.component';
 import {MatSelectModule} from "@angular/material/select";
 import { DeleteConfirmationDialogComponent } from './delete-confirmation-dialog/delete-confirmation-dialog.component';
+import { HistoryComponent } from './history/history.component';
+import { DepartmentsPageComponent } from './departments-page/departments-page.component';
+import { FreshmanGuideComponent } from './freshman-guide/freshman-guide.component';
+import { RoomsComponent } from './rooms/rooms.component';
+import { AdmissionsComponent } from './admissions/admissions.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +42,12 @@ import { DeleteConfirmationDialogComponent } from './delete-confirmation-dialog/
     AddTeamLeaderDialogComponent,
     EditTeamLeaderDialogComponent,
     DeleteConfirmationDialogComponent,
+    HistoryComponent,
+    DepartmentsPageComponent,
+    FreshmanGuideComponent,
+    RoomsComponent,
+    AdmissionsComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

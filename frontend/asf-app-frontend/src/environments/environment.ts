@@ -1,5 +1,5 @@
 export const environment = {
     production: false,
-    apiUrl: 'http://idk/api',
-    appUrl: 'http://idk'
+    apiUrl: 'http://localhost:80/api',
+    appUrl: 'http://localhost:80'
 };
