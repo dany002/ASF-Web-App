@@ -1,0 +1,57 @@
+<div class="title">Contact</div>
+<div class="contact-container">
+  <!-- Left Part - Location, Phone Number, Email -->
+  <div class="left-part">
+    <div class="icon">
+      <i class="material-icons">location_on</i>
+      <p>Strada Mihail Kogălniceanu 1, Cluj-Napoca 400084</p>
+    </div>
+
+    <div class="icon">
+      <i class="material-icons">phone</i>
+      <p>+40755145215</p>
+    </div>
+
+    <div class="icon">
+      <i class="material-icons">email</i>
+      <p>asfubbcluj@gmail.com</p>
+    </div>
+    <h2>Ne puteți contacta de luni până vineri în intervalul 8:00 - 18:00</h2>
+  </div>
+
+
+  <!-- Right Part - Contact Form -->
+  <div class="right-part">
+    <form class="contact-form" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="firstName">Prenume</label>
+        <mat-form-field appearance="fill" style="width: 40%;">
+          <input matInput id="firstName" placeholder="Enter your first name" formControlName="firstName">
+        </mat-form-field>
+      </div>
+
+      <div class="form-group">
+        <label for="nume">Nume</label>
+        <mat-form-field appearance="fill" style="width: 40%;">
+          <input matInput id="nume" placeholder="Enter your last name">
+        </mat-form-field>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <mat-form-field appearance="fill" style="width: 40%;">
+          <input matInput id="email" placeholder="Enter your email">
+        </mat-form-field>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Mesajul tau</label>
+        <mat-form-field appearance="fill" style="width: 40%;">
+          <textarea matInput id="message" placeholder="Enter your message"></textarea>
+        </mat-form-field>
+      </div>
+
+      <button mat-raised-button color="primary">Trimite</button>
+    </form>
+  </div>
+</div>

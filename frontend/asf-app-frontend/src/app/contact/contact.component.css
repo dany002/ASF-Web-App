@@ -1,0 +1,93 @@
+.contact-container {
+  margin: 100px auto; /* Center the container horizontally */
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  background-color: #eafca8;;
+}
+
+
+.title {
+  text-align: center;
+  font-size: 40px;
+  margin-top: 50px; /* Adjust margin as needed */
+}
+
+
+.left-part {
+  flex: 0 0 30%;
+  padding: 20px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.right-part {
+  flex: 1;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.contact-form {
+  width: 100%;
+}
+
+
+.form-group label {
+  margin-right: 10px;
+  min-width: 100px; /* Set a minimum width for labels to align properly */
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.mat-form-field {
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.mat-form-field input, .mat-form-field textarea {
+  width: 100%; /* Set width to 100% */
+}
+
+
+.icon {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.icon i {
+  margin-right: 15px; /* Increase the space between icon and text */
+  font-size: 20px; /* Increase the font size of the icon */
+}
+
+.left-part h2{
+  margin-top: 50px;
+  align-content: center;
+  font-size: 40px;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.icon p {
+  font-size: 16px; /* Increase the font size of the text */
+}
+
+button {
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .left-part, .right-part {
+    margin-right: 0;
+    width: 100%;
+  }
+}

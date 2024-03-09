@@ -17,7 +17,7 @@ import { AddDepartmentDialogComponent } from './add-department-dialog/add-depart
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatDialogModule} from "@angular/material/dialog";
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { EditDepartmentDialogComponent } from './edit-department-dialog/edit-department-dialog.component';
 import { AddTeamLeaderDialogComponent } from './add-team-leader-dialog/add-team-leader-dialog.component';
@@ -30,6 +30,7 @@ import { FreshmanGuideComponent } from './freshman-guide/freshman-guide.componen
 import { RoomsComponent } from './rooms/rooms.component';
 import { AdmissionsComponent } from './admissions/admissions.component';
 import { FooterComponent } from './footer/footer.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { FooterComponent } from './footer/footer.component';
     RoomsComponent,
     AdmissionsComponent,
     FooterComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
@@ -65,6 +67,7 @@ import { FooterComponent } from './footer/footer.component';
     ReactiveFormsModule,
     HttpClientModule,
     MatSelectModule,
+    FormsModule,
 
   ],
   providers: [],
