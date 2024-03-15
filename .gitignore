@@ -1,2 +1,3 @@
 resources
 nginx/nginx.conf
+backend/ASF/src/main/resources/application.properties

@@ -22,7 +22,7 @@
 
   <!-- Right Part - Contact Form -->
   <div class="right-part">
-    <form class="contact-form" (ngSubmit)="onSubmit()">
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
       <div class="form-group">
         <label for="firstName">Prenume</label>
         <mat-form-field appearance="fill" style="width: 40%;">
@@ -31,23 +31,23 @@
       </div>
 
       <div class="form-group">
-        <label for="nume">Nume</label>
+        <label for="lastName">Nume</label>
         <mat-form-field appearance="fill" style="width: 40%;">
-          <input matInput id="nume" placeholder="Enter your last name">
+          <input matInput id="lastName" placeholder="Enter your last name" formControlName="lastName">
         </mat-form-field>
       </div>
 
       <div class="form-group">
         <label for="email">Email</label>
         <mat-form-field appearance="fill" style="width: 40%;">
-          <input matInput id="email" placeholder="Enter your email">
+          <input matInput id="email" placeholder="Enter your email" formControlName="email">
         </mat-form-field>
       </div>
 
       <div class="form-group">
         <label for="message">Mesajul tau</label>
         <mat-form-field appearance="fill" style="width: 40%;">
-          <textarea matInput id="message" placeholder="Enter your message"></textarea>
+          <textarea matInput id="message" placeholder="Enter your message" formControlName="message"></textarea>
         </mat-form-field>
       </div>
 
